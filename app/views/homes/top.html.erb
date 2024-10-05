@@ -1,0 +1,30 @@
+
+
+<main>
+
+  <% flash.each do |message_type, message| %>
+    <div class="flash-message <%= message_type %>"><%= message %></div>
+  <% end %>
+
+  <h1>welcome to</h1>
+  <!-- アイコン挿入　-->
+  <strong>Bookers</storong>
+
+  <P>
+    In
+    <!-- アイコン挿入 -->
+    <strong>bookers</strong>
+  </p>
+
+  <p>you can share and exchange your opinions, and emotions</p>
+  <p>about various books!</p>
+
+  <li>
+    <%= link_to "Log in", new_user_session_path%>
+  </li>
+   <li>
+    <%= link_to "Sign up", new_user_registration_path %>
+   </li>
+</main>
+
+<footer>CopyRight Infratop.inc</footer>

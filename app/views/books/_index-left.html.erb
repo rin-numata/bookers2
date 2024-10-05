@@ -1,0 +1,27 @@
+<h2>User info</h2>
+
+<%= image_tag user.get_profile_image(100, 100) %>
+<table>
+  <tr>
+    <th>name</th><th><%= user.name %></th>
+  </tr>
+  <tr>
+    <th>introduction</th><th><%= user.introduction %></th>
+  </tr>
+</table>
+
+<p><%= button_to "edit", edit_user_path(user.id), method: :get %></p>
+
+<h2>New book</h2>
+
+<%= form_with model: Book.new do |f| %>
+
+  <label>Title</label>
+  <%= f.text_field :title %>
+
+  <label>Opinion</label>
+  <%= f.text_area :body %>
+
+  <%= f.submit 'Create Book' %>
+
+<% end %>

@@ -1,0 +1,4 @@
+<!-- users/index 右側： User(ユーザー一覧) path: users_path -->
+
+<%= render 'books/index-left', books: Book.all, book: @book, user: current_user %>
+<%= render 'users/index', users: User.all %>

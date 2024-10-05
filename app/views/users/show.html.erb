@@ -1,0 +1,8 @@
+<!-- users/show 右側：Books(自分が投稿したやつ) path: user_path(current_user.id)-->
+
+  <% flash.each do |message_type, message| %>
+    <div class="flash-message <%= message_type %>"><%= message %></div>
+  <% end %>
+
+<%= render 'books/index-left', books: Book.all, book: @book, user: User.find(params[:id]) %>
+<%= render 'books/index-right', books: Book.where(user_id: User.find(params[:id])), book: @book, user: @user %>
