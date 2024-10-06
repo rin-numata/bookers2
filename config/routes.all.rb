@@ -56,16 +56,10 @@ new_rails_conductor_inbound_email_source GET    /rails/conductor/action_mailbox/
                update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                               active_storage/disk#update
                     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                                    active_storage/direct_uploads#create
                     
-rspec ./spec/system/03_finishing_touches_spec.rb:179 # [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する ユーザ一覧画面
-rspec ./spec/system/03_finishing_touches_spec.rb:183 # [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する ユーザ詳細画面
-rspec ./spec/system/03_finishing_touches_spec.rb:187 # [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する ユーザ情報編集画面
-rspec ./spec/system/03_finishing_touches_spec.rb:191 # [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿一覧画面
-rspec ./spec/system/03_finishing_touches_spec.rb:195 # [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿詳細画面
-rspec ./spec/system/03_finishing_touches_spec.rb:199 # [STEP3] 仕上げのテスト ログインしていない場合のアクセス制限のテスト: アクセスできず、ログイン画面に遷移する 投稿編集画面
 rspec ./spec/system/03_finishing_touches_spec.rb:243 # [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
 rspec ./spec/system/03_finishing_touches_spec.rb:247 # [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
 rspec ./spec/system/03_finishing_touches_spec.rb:250 # [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
 rspec ./spec/system/03_finishing_touches_spec.rb:254 # [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない
 rspec ./spec/system/03_finishing_touches_spec.rb:265 # [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる
 rspec ./spec/system/03_finishing_touches_spec.rb:363 # [STEP3] 仕上げのテスト アイコンのテスト トップ画面 本のアイコンが表示される
-rspec ./spec/system/03_finishing_touches_spec.rb:375 # [STEP3] 仕上げのテスト アイコンのテスト アバウト画面 本のアイコンが表示される
+rspec ./spec/system/03_finishing_touches_spec.rb:375 # [STEP3] 仕上げのテスト アイコンのテスト アバウト画面 本のアイコンが表示さ
