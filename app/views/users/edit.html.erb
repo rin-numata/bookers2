@@ -1,25 +1,37 @@
-<h2>Users info</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
 
-<% if @user.errors.any? %>
-  <%= @user.errors.count %> errors prohibited this obj from being saved:
-  <ul>
-    <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+      <h2>Users info</h2>
 
-<%= form_with model: @user, url: user_path(@user.id), method: :patch do |f| %>
+      <% if @user.errors.any? %>
 
-  <label>Name</label>
-  <%= f.text_field :name %>
+        <%= @user.errors.count %> errors prohibited this obj from being saved:
 
-  <label></label>
-  <%= f.file_field :image, accept: "image/*"  %>
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
 
-  <label>Introduction</label>
-  <%= f.text_area :introduction %>
+      <% end %>
 
-  <%= f.submit 'Update User' %>
 
-<% end %>
+      <%= form_with model: @user, url: user_path(@user.id), method: :patch do |f| %>
+
+        <h6>Name</h6>
+        <%= f.text_field :name %>
+
+        <h6>Image</h6>
+        <%= f.file_field :profile_image, accept: "image/*"  %>
+
+        <h6>Introduction</h6>
+        <%= f.text_area :introduction %>
+
+        <h6><%= f.submit 'Update User' %></h6>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>

@@ -1,35 +1,41 @@
 <h2>Book detail</h2>
 
-<table>
-  <tr>
-    <td>
-      <%= link_to book_path(book.user.id) do %>
-        <%= image_tag book.user.get_profile_image(100, 100) %><br>
-      <% end %>
-      <%= link_to user_path(book.user.id) do %>
-        <%= book.user.name %>
-      <% end %>
-    </td>
-
-    <td>
-      <%= link_to book_path(book.id) do %>
-        <%= book.title %>
-      <% end%>
-    </td>
-
-    <td><%= book.body %></td>
-
-    <% if book.user == current_user %>
-
+<table class="table">
+  <tbody>
+    <tr>
       <td>
-        <%= link_to "Edit", edit_book_path(book.id) %>
+        <%= link_to book_path(book.user.id) do %>
+          <%= image_tag book.user.get_profile_image(100, 100) %><br>
+        <% end %>
+        <%= link_to user_path(book.user.id) do %>
+          <%= book.user.name %>
+        <% end %>
       </td>
 
       <td>
-        <%= link_to "Destroy", book_path(book), method: :delete %>
+        <%= link_to book_path(book.id) do %>
+          <%= book.title %>
+        <% end %>
       </td>
 
-    <% end %>
+      <td><%= book.body %></td>
 
-  </tr>
+      <% if book.user == current_user %>
+
+        <td>
+          <label class="btn btn-sm btn-success">
+            <%= link_to "Edit", edit_book_path(book.id) %>
+          </label>
+        </td>
+
+        <td>
+          <label class="btn btn-sm btn-danger">
+            <%= link_to "Destroy", book_path(book), method: :delete %>
+          </label>
+        </td>
+
+      <% end %>
+
+    </tr>
+  </tbody>
 </table>
