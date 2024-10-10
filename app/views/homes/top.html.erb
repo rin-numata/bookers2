@@ -6,26 +6,38 @@
     <div class="flash-message <%= message_type %>"><%= message %></div>
   <% end %>
 
-  <h1>welcome to</h1>
-  <!-- アイコン挿入　-->
-  <i class="fa-solid fa-book"></i>
-  <strong>Bookers</storong>
+  <div class="container">
+    <div class="row">
+      <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
 
-  <P>
-    In
-    <!-- アイコン挿入 -->
-    <i class="fa-solid fa-book"></i>
-    <strong>bookers</strong>
-  </p>
+        <h1>welcome to</h1>
+        <!-- アイコン挿入　-->
+        <i class="fa-solid fa-book"></i>
+        <strong>Bookers</storong>
 
-  <p>you can share and exchange your opinions, and emotions</p>
-  <p>about various books!</p>
+        <P>
+          In
+          <!-- アイコン挿入 -->
+          <i class="fa-solid fa-book"></i>
+          <strong>bookers</strong>
+        </p>
 
-  <li>
-    <%= link_to "Log in", new_user_session_path%>
-  </li>
-   <li>
-    <%= link_to "Sign up", new_user_registration_path %>
-   </li>
+        <p>you can share and exchange your opinions, and emotions</p>
+        <p>about various books!</p>
 
+        <div class="btn-wrapper col-10 mx-auto">
+          <div class="row">
+            <li>
+              <%= link_to "Log in", new_user_session_path%>
+            </li>
+          </div>
+          <div class="row">
+            <li>
+              <%= link_to "Sign up", new_user_registration_path %>
+             </li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
